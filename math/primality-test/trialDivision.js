@@ -19,8 +19,8 @@ function trialDivision(number){
 		return false
 	}
 
-	const dividerLimit = Math.sqrt(number) // ある数字の平方根以上でその数字を割れない
-	for(let divider = 3; divider <= dividerLimit; divider += 2){
+	const dividerLimit = Math.sqrt(number) // ある数字の平方根が約数の対になる折り返し地点
+	for(let divider = 3; divider <= dividerLimit; divider += 2){ //偶数は上で省いているので3から割る。かつ1を足すと偶数→奇数→偶数になるが偶数ではないことは分かっているので奇数だけで割っていく。
 		if(number % divider === 0){
 			return false
 		}
