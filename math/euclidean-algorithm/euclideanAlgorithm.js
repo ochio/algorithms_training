@@ -13,9 +13,9 @@ function euclideanAlgorithm(originalA, originalB){
 	const b = Math.abs(originalB)
 
 	// 合同式を使ってるらしいけど何してるか分からん
-	console.log(a,"%",b, a%b);
 	return (b === 0) ? a : euclideanAlgorithm(b, a % b) //→割る数を余りで割っていく
 	// a < b だったら１回目で入れ替わる。a % b = a になるから。
 }
 
-console.log(euclideanAlgorithm(253,105))
+
+module.exports = euclideanAlgorithm
