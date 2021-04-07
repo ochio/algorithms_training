@@ -33,4 +33,54 @@ class Comparator {
 	equal(a,b){
 		return this.compare(a,b) === 0
 	}
+
+	/**
+	 * aがb未満であることを確認
+	 * @param {*} a
+	 * @param {*} b
+	 * @return {boolean}
+	 */
+	lessThan(a,b){
+		return this.compare(a,b) < 0
+	}
+
+	/**
+	 * aがbより大きいことを確認
+	 * @param {*} a
+	 * @param {*} b
+	 * @return {boolean}
+	 */
+	greaterThan(a,b){
+		return this.compare(a,b) > 0
+	}
+
+	/**
+	 * aがb以下であることを確認
+	 * @param {*} a
+	 * @param {*} b
+	 * @return {boolean}
+	 */
+	lessThanOrEqual(a,b){
+		return this.lessThan(a,b) || this.equal(a,b)
+	}
+
+	/**
+	 * aがb以上であることを確認
+	 * @param {*} a
+	 * @param {*} b
+	 * @return {boolean}
+	 */
+	greaterThanOrEqual(a,b){
+		return this.greaterThan(a,b) || this.equal(a,b)
+	}
+
+	/**
+	 * 比較のするa,bを入れ替える
+	 */
+	reverse(){
+		const compareOriginal = this.compare
+		this.compare = (a,b) => compareOriginal(b,a)
+	}
 }
+
+module.exports = Comparator
