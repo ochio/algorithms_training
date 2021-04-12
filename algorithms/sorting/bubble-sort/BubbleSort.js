@@ -35,8 +35,3 @@ class BubbleSort extends Sort {
 }
 
 module.exports = BubbleSort
-
-const a = new BubbleSort
-console.log(
-	a.sort([2,1,3,3,4,5,0,6,7,8,9])
-);
