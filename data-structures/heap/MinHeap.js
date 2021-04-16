@@ -12,9 +12,3 @@ class MinHeap extends Heap{
 }
 
 module.exports = MinHeap
-
-const a = new MinHeap()
-a.add(1)
-a.add(3)
-
-console.log(a);
