@@ -1,5 +1,4 @@
 const Comparator = require('../../utils/comparator/Comparator')
-const Sort = require('../../utils/comparator/Comparator')
 
 /**
  * ヒープの親クラス
@@ -80,6 +79,14 @@ class Heap {
 	 */
 	rightChild(parentIndex){
 		return this.heapContainer[this.getRightChildIndex(parentIndex)]
+	}
+
+	/**
+	 * @param {number} childIndex
+	 * @return {*}
+	 */
+	parent(childIndex) {
+		return this.heapContainer[this.getParentIndex(childIndex)];
 	}
 
 	/**
@@ -267,3 +274,5 @@ class Heap {
 	}
 
 }
+
+module.exports = Heap
