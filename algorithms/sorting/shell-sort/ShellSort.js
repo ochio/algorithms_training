@@ -26,6 +26,7 @@ class ShellSort extends Sort {
 						array[gapShiftedIndex] = tmp
 					}
 
+					// 動かした後にまた比較するため?
 					gapShiftedIndex = currentIndex 
 					currentIndex -= gap
 				}
