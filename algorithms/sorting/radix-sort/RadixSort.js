@@ -21,6 +21,7 @@ class RadixSort extends Sort {
 				? this.placeElementsIsNumberBuckets(sortedArray, currentIndex)
 				: this.placeElementsIsCharacterBuckets(sortedArray, currentIndex, numPasses)
 			
+			// その桁で比べたときのバケットをネストしてない配列に戻す
 			sortedArray = buckets.reduce((acc, val) => {
 				return [...acc, ...val]
 			}, [])
@@ -137,8 +138,3 @@ class RadixSort extends Sort {
 }
 
 module.exports = RadixSort
-
-const a = ["a","d","b","s","b"]
-const b = new RadixSort
-
-console.log(b.sort(a));
