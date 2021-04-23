@@ -16,3 +16,5 @@ function traversal(linkedList, callback){
 		currentNode = currentNode.next
 	}
 }
+
+module.exports = traversal
