@@ -10,6 +10,7 @@
  */
 function reverseTraversalRecursive(node, callback){
 	if(node){
+		// コールスタックが積まれるので最後のから処理される。
 		reverseTraversalRecursive(node.next, callback)
 		callback(node.value)
 	}
