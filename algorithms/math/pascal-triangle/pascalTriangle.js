@@ -14,3 +14,5 @@ function pascalTriangle(lineNumber){
 
 	return currentLine
 }
+
+module.exports = pascalTriangle
