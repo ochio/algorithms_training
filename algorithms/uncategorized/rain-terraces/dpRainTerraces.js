@@ -35,7 +35,7 @@ function dpRainTerraces(terraces){
 			rightMaxLevels[terraceIndex]
 		)
 
-		if(curretnTerraceBoundary > terraces[terraceIndex]){
+		if(curretnTerraceBoundary > terraces[terraceIndex]){ // 最大の高さが列の高さより大きいとき
 			waterAmount += curretnTerraceBoundary - terraces[terraceIndex] // その列の溜まる最大 - その列の高さ = 実際の水の量
 		}
 	}
