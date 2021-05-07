@@ -12,7 +12,7 @@ function dpRainTerraces(terraces){
 	const rightMaxLevels = new Array(terraces.length).fill(0);
 
 	// 左から見て最大の高さの列を探す
-	[leftMaxLevels[0]] = terraces // terracsの1番目をleftMaxLevelsの0番目に代入
+	[leftMaxLevels[0]] = terraces // (分割代入)terracsの1番目をleftMaxLevelsの0番目に代入
 	for(let terraceIndex = 1; terraceIndex < terraces.length; terraceIndex += 1){ // 一番左から二つ目から始める。
 		leftMaxLevels[terraceIndex] = Math.max(
 			terraces[terraceIndex],
